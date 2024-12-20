@@ -349,6 +349,7 @@ std::tuple<MatrixXd,MatrixXd,MatrixXd,MatrixXd> SphExpansion::determine_weights_
            potl(loffset+moffset,n) = fac2*potd(l,n);
            potr(loffset+moffset,n) = fac2*dpot(l,n);
            pott(loffset+moffset,n) = fac1*dlegs(l,m)*potd(l,n);
+           potp(loffset+moffset,n) = 0.0;
          }
 
          moffset++;

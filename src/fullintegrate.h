@@ -1580,8 +1580,8 @@ std::vector<double> MWLMC::get_expansion_centre_velocities_physical(double t, bo
 
   vcentres = get_expansion_centre_velocities_virial(tvir, verbose);
 
-  // recast to physical distances
-  for (int i=0;i<12;i++) vcentres[i] = virial_to_physical_length(vcentres[i]);
+  // recast to physical velocities
+  for (int i=0;i<12;i++) vcentres[i] = virial_to_physical_velocity(vcentres[i]);
 
   return vcentres;
 
