@@ -31,14 +31,14 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_CLANG_FORMAT: true
+          VALIDATE_PYTHON_BLACK: true
+          VALIDATE_MARKDOWN_PRETTIER: true
+          VALIDATE_YAML: true
+          VALIDATE_YAML_PRETTIER: true
           FIX_CLANG_FORMAT: true
           FIX_PYTHON_BLACK: true
-          FIX_PYTHON_ISORT: true
-          FIX_PYTHON_RUFF: true
-          FIX_JUPYTER_NBQA_BLACK: true
-          FIX_MARKDOWN: true
-          FIX_JUPYTER_NBQA_ISORT: true
-          FIX_JUPYTER_NBQA_RUFF: true
           FIX_MARKDOWN_PRETTIER: true
           FIX_YAML_PRETTIER: true
       
