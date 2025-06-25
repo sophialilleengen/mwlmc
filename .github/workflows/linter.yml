@@ -5,19 +5,17 @@ on: # yamllint disable-line rule:truthy
   push: null
   pull_request: null
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
-  build:
-    name: Lint
-    runs-on: ubuntu-latest
-
+  fix-lint-issues:
     permissions:
+      # To write linting fixes
       contents: write
-      packages: read
-      # To report GitHub Actions status checks
+      # To write Super-linter status checks
       statuses: write
-
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
